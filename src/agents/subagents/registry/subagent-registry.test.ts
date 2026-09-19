@@ -481,8 +481,7 @@ describe("subagent registry seam flow", () => {
     const registry = await import("./subagent-registry.test-helpers.js");
     mod = {
       ...registry,
-      addSubagentRunForTests: (entry) =>
-        registry.addSubagentRunForTests(createSubagentRunRecord(entry)),
+      addSubagentRunForTests: registry.addSubagentRunForTests,
       registerSubagentRun: (params) =>
         registry.registerSubagentRun(createSubagentRunParams(params)),
     };
